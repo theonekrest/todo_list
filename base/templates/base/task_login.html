@@ -2,5 +2,5 @@
 <form action="" method="post">
   {% csrf_token %} {{ form.as_p}}
   <input type="submit" value="login" />
+  <p>New User? <a href="{% url 'task-register' %}">Register Now!</a></p>
 </form>
-<a href="">Register User</a>

@@ -3,11 +3,12 @@
 <table>
   <tr>
     <th>Items</th>
+    <th><a href="{% url 'task-create' %}">Create</a></th>
   </tr>
   {% for task in tasks %}
   <tr>
     <td>{{task.title}}</td>
-    <td><a href="{% url 'detail' task.id %}">View</a></td>
+    <td><a href="{% url 'task-detail' task.id %}">View</a></td>
   </tr>
   {% empty %}
   <h2>No items in the list</h2>
